@@ -15,6 +15,7 @@ class BlogController extends AbstractController
     }
 
 // Symfony quête 4 : le routing avancé
+// possibilité de placer : , defaults={"slug"="Article Sans Titre"} dans la route
     /**
      * @Route("/blog/{slug<^$|[a-z0-9](-*[a-z0-9])*$>}", name="blog_show")
      */
