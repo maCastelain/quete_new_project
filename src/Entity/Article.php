@@ -28,10 +28,12 @@ class Article
     private $content;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Category")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="articles")
      * @ORM\JoinColumn(nullable=false)
      */
     private $category;
+
+
 
     public function getId(): ?int
     {
@@ -73,4 +75,5 @@ class Article
 
         return $this;
     }
+
 }

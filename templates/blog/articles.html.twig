@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Liste des catégories et leurs articles</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nom de la catégorie</th>
+                <th>Titre de l'article</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for article in articles %}
+            <tr>
+                <td>{{ article.category.name }}</td>
+                <td>{{ article.title }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <img src="https://medias.spotern.com/spots/w640/76053-1532336916.jpg">
+{% endblock %}
