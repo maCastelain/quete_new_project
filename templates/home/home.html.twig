@@ -3,4 +3,14 @@
 {% block body %}
     <h1>Welcome WCS!</h1>
     <img src="http://33.media.tumblr.com/6a13105d0b76bd72804ece9875ded975/tumblr_n4yk3fxmhC1rb2l1co1_400.gif">
+    <br>
+    <a href="{{ path('blog_articles') }}">Go to Blog articles ' page</a>
+    <br>
+    <a href="{{ path('blog_show', { 'slug': "javascript-vs-php" }) }}">
+        Testing show() method from BlogController with a real article s slug.
+    </a>
+    <br>
+    <a href="{{ path('blog_index') }}">
+        Testing index() method from BlogController to view all articles.
+    </a>
 {% endblock %}
